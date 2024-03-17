@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="search-box">
+        <i class="fa-solid fa-location-dot"></i>
+        <input type="text" class="input" placeholder="Type Your City Here" />
+        <button id="btn">
+          <i class="fa-solid fa-magnifying-glass searching" id="search"></i>
+        </button>
+      </div>
+      <div class="img">
+        <img src="images/clear.png" alt="" />
+      </div>
+      <h2 class="temp">18 <span>°C</span></h2>
+      <p class="des">Broken Clouds</p>
+      <div class="details">
+        <div class="humid sec">
+          <i class="fa-solid fa-water"></i>
+          <div class="percent">
+            <p class="percentage">55%</p>
+            <p class="humid-des">Humidity</p>
+          </div>
+        </div>
+        <div class="wind sec">
+          <i class="fa-solid fa-wind"></i>
+          <div class="percent">
+            <p class="wind-speed">0Km/h</p>
+            <p class="wind-des">Wind Speed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="error-img">
+      <img src="images/404.png" alt="" class="err-img" />
+      <p class="opps">Opss ... Location Not Found</p>
+    </div>
+    <script src="js/all.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
