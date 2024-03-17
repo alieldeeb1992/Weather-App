@@ -24,6 +24,7 @@ searchBtn.addEventListener("click", function search() {
         myDescription.style.display = "none";
         errorSec.style.display = "block";
       }
+
       let tempratureData = json.weather[0].main;
       if (tempratureData === "Clear") {
         myImg.src = `images/clear.png`;
@@ -38,10 +39,11 @@ searchBtn.addEventListener("click", function search() {
       } else if (tempratureData === "Haze") {
         myImg.src = `images/mist.png`;
       }
+      console.log(json);
       myDegree.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
       myDescription.innerHTML = tempratureData;
       myHumidPercentage.innerHTML = `${json.main.humidity}%`;
-      myWindSpeed.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+      myWindSpeed.innerHTML = `${parseInt(json.wind.speed * 3.6)}Km/h`;
       myImg.style.display = "block";
       myDatails.style.display = "flex";
       myDegree.style.display = "flex";
